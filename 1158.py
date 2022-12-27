@@ -6,7 +6,7 @@ num = 0
 
 for t in range(N):
     num += K - 1
-    if num >= len(arr): 
+    if num >= len(arr):
         num = num % len(arr)
 
     answer.append(str(arr.pop(num))) # pop(num)은 num을 리턴하고 num을 지운다.
