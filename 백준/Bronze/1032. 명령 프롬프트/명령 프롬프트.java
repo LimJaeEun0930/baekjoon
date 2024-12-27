@@ -1,11 +1,14 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 
 public class Main { // 비트연산을 이요한 풀이
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int count = Integer.parseInt(bf.readLine());
         String[] inputs = new String[count];
         while (--count >= 0) {
@@ -32,6 +35,8 @@ public class Main { // 비트연산을 이요한 풀이
                 sb.append(inputs[0].charAt(i));
             }
         }
-        System.out.println(sb.toString());
+        bw.write(sb.toString());
+        bf.close();
+        bw.close();
     }
 }
